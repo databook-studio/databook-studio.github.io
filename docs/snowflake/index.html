@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Connect to Snowflake with User/Password, Key-Pair, or SSO — plus efficient handling of large result sets."><meta name="generator" content="Astro v7.0.7"><meta name="theme-color" content="#fdfcfc"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://databook-studio.github.io/docs/snowflake/"><link rel="preconnect" href="https://www.googletagmanager.com"><meta property="og:title" content="Snowflake Support — DataBook Studio"><meta property="og:description" content="Connect to Snowflake with User/Password, Key-Pair, or SSO — plus efficient handling of large result sets."><meta property="og:type" content="article"><meta property="og:url" content="https://databook-studio.github.io/docs/snowflake/"><meta property="og:image" content="https://databook-studio.github.io/logo.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="844"><meta property="og:image:height" content="449"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://databook-studio.github.io/logo.png"><title>Snowflake Support — DataBook Studio</title><script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DataBook Studio",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": ["macOS", "Windows"],
+        "description": "A desktop-native Data IDE and SQL Notebook for PostgreSQL, MySQL, Snowflake, and DuckDB with an AI copilot.",
+        "url": "https://databook-studio.github.io/",
+        "image": "https://databook-studio.github.io/logo.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "9.99",
+          "priceCurrency": "USD"
+        }
+      }
+    </script><!-- Consent Mode v2 defaults — must run before gtag.js loads --><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    </script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-EKQGHGY6W9"></script><script>
+      gtag('js', new Date());
+      gtag('config', 'G-EKQGHGY6W9');
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.DeVqzBDj.css"><style>.doc-layout[data-astro-cid-ptuyl3tj]{gap:var(--space-2xl);padding-block:var(--space-2xl);grid-template-columns:240px 1fr;align-items:start;display:grid}.doc-sidebar[data-astro-cid-ptuyl3tj]{top:calc(var(--nav-height) + var(--space-lg));max-height:calc(100vh - var(--nav-height) - var(--space-lg));border-right:1px solid var(--hairline);padding-right:var(--space-lg);position:sticky;overflow-y:auto}.doc-search-wrap[data-astro-cid-ptuyl3tj],.doc-nav-group[data-astro-cid-ptuyl3tj]{margin-bottom:var(--space-xl)}.doc-nav-label[data-astro-cid-ptuyl3tj]{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--mute);text-transform:uppercase;margin-bottom:var(--space-sm);padding-left:var(--space-sm);font-weight:700}.doc-nav-link[data-astro-cid-ptuyl3tj]{font-family:var(--font-sans);font-size:var(--text-sm);color:var(--body);padding:var(--space-xs) var(--space-sm);border-radius:var(--radius-sm);transition:background var(--transition-fast), color var(--transition-fast);text-decoration:none;display:block}.doc-nav-link[data-astro-cid-ptuyl3tj]:hover{color:var(--ink);background:var(--surface-soft)}.doc-nav-link[data-astro-cid-ptuyl3tj].active{color:var(--accent);font-weight:500}.doc-content[data-astro-cid-ptuyl3tj]{min-width:0}.doc-breadcrumb[data-astro-cid-ptuyl3tj]{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--mute);margin-bottom:var(--space-lg);gap:var(--space-xs);flex-wrap:wrap;display:flex}.doc-breadcrumb[data-astro-cid-ptuyl3tj] a[data-astro-cid-ptuyl3tj]{color:var(--mute)}.doc-breadcrumb[data-astro-cid-ptuyl3tj] .sep[data-astro-cid-ptuyl3tj]{color:var(--ash)}.doc-breadcrumb[data-astro-cid-ptuyl3tj] .current[data-astro-cid-ptuyl3tj]{color:var(--ink)}.doc-title[data-astro-cid-ptuyl3tj]{font-size:var(--text-2xl);margin:0 0 var(--space-md)}.doc-description[data-astro-cid-ptuyl3tj]{font-size:var(--text-lg);color:var(--body);margin:0 0 var(--space-2xl)}@media (width<=900px){.doc-layout[data-astro-cid-ptuyl3tj]{grid-template-columns:1fr}.doc-sidebar[data-astro-cid-ptuyl3tj]{border-right:none;border-bottom:1px solid var(--hairline);max-height:none;padding-right:0;padding-bottom:var(--space-xl);position:static}}
+</style></head><body><a href="#main" class="skip-link">Skip to content</a><header class="primary-nav" data-astro-cid-exq676es><div class="container-wide nav-inner" data-astro-cid-exq676es><a href="/" class="wordmark" aria-label="DataBook Studio home" data-astro-cid-exq676es><img src="/logo.png" alt="DataBook Studio" class="nav-logo" width="844" height="449" data-astro-cid-exq676es></a><nav class="nav-links" aria-label="Primary" data-astro-cid-exq676es><a href="/features/" class="nav-link" data-astro-cid-exq676es>Features</a><a href="/saya-ai/" class="nav-link" data-astro-cid-exq676es>SAYA AI</a><a href="/databases/" class="nav-link" data-astro-cid-exq676es>Databases</a><a href="/security/" class="nav-link" data-astro-cid-exq676es>Security</a><a href="/docs/" class="nav-link active" aria-current="page" data-astro-cid-exq676es>Docs</a><a href="/changelog/" class="nav-link" data-astro-cid-exq676es>Changelog</a><a href="/pricing/" class="nav-link" data-astro-cid-exq676es>Pricing</a></nav><a href="/download/" class="btn btn-primary btn-sm nav-cta" data-astro-cid-exq676es><svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" data-astro-cid-exq676es="true" class="lucide lucide-download icon"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg><span data-astro-cid-exq676es>Download</span></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="nav-toggle" data-astro-cid-exq676es><svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-exq676es="true" class="lucide lucide-menu icon icon-open"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg><svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-exq676es="true" class="lucide lucide-x icon icon-close"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><nav class="nav-drawer" id="nav-drawer" aria-hidden="true" data-astro-cid-exq676es><a href="/features/" class="nav-drawer-link" data-astro-cid-exq676es>Features</a><a href="/saya-ai/" class="nav-drawer-link" data-astro-cid-exq676es>SAYA AI</a><a href="/databases/" class="nav-drawer-link" data-astro-cid-exq676es>Databases</a><a href="/security/" class="nav-drawer-link" data-astro-cid-exq676es>Security</a><a href="/docs/" class="nav-drawer-link active" aria-current="page" data-astro-cid-exq676es>Docs</a><a href="/changelog/" class="nav-drawer-link" data-astro-cid-exq676es>Changelog</a><a href="/pricing/" class="nav-drawer-link" data-astro-cid-exq676es>Pricing</a><a href="/download/" class="btn btn-primary nav-drawer-cta" data-astro-cid-exq676es>Download</a></nav></header><script>
+  const primaryNav = document.querySelector(".primary-nav");
+  function setScrolled() {
+    primaryNav?.classList.toggle("scrolled", window.scrollY > 8);
+  }
+  setScrolled();
+  window.addEventListener("scroll", setScrolled, { passive: true });
+
+  const toggle = document.getElementById("nav-toggle");
+  const drawer = document.getElementById("nav-drawer");
+
+  function setDrawer(open) {
+    drawer?.classList.toggle("open", open);
+    toggle?.setAttribute("aria-expanded", String(open));
+    if (drawer) drawer.setAttribute("aria-hidden", String(!open));
+  }
+
+  toggle?.addEventListener("click", () => {
+    const open = !drawer?.classList.contains("open");
+    setDrawer(open);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && drawer?.classList.contains("open")) {
+      setDrawer(false);
+      toggle?.focus();
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    const target = e.target;
+    if (
+      drawer?.classList.contains("open") &&
+      target instanceof Node &&
+      !drawer.contains(target) &&
+      !toggle.contains(target)
+    ) {
+      setDrawer(false);
+    }
+  });
+</script><main id="main"><div class="doc-layout container-wide" data-astro-cid-ptuyl3tj><aside class="doc-sidebar" data-astro-cid-ptuyl3tj><div class="doc-search-wrap" data-astro-cid-ptuyl3tj><div id="pagefind-search" data-astro-cid-ptuyl3tj></div></div><nav class="doc-nav" aria-label="Documentation" data-astro-cid-ptuyl3tj><div class="doc-nav-group" data-astro-cid-ptuyl3tj><div class="doc-nav-label" data-astro-cid-ptuyl3tj>Databases</div><a href="/docs/snowflake/" class="doc-nav-link active" data-astro-cid-ptuyl3tj>Snowflake Support</a></div><div class="doc-nav-group" data-astro-cid-ptuyl3tj><div class="doc-nav-label" data-astro-cid-ptuyl3tj>SAYA AI</div><a href="/docs/saya-ai/" class="doc-nav-link" data-astro-cid-ptuyl3tj>SAYA AI Copilot</a></div><div class="doc-nav-group" data-astro-cid-ptuyl3tj><div class="doc-nav-label" data-astro-cid-ptuyl3tj>Releases</div><a href="/docs/releases/" class="doc-nav-link" data-astro-cid-ptuyl3tj>Releases</a></div></nav></aside><article class="doc-content" data-pagefind-body data-astro-cid-ptuyl3tj><div class="doc-breadcrumb" data-astro-cid-ptuyl3tj><a href="/docs/" data-astro-cid-ptuyl3tj>Docs</a><span class="sep" data-astro-cid-ptuyl3tj>/</span><span data-astro-cid-ptuyl3tj>Databases</span><span class="sep" data-astro-cid-ptuyl3tj>/</span><span class="current" data-astro-cid-ptuyl3tj>Snowflake Support</span></div><h1 class="doc-title" data-astro-cid-ptuyl3tj>Snowflake Support</h1><p class="doc-description" data-astro-cid-ptuyl3tj>Connect to Snowflake with User/Password, Key-Pair, or SSO — plus efficient handling of large result sets.</p><div class="prose-doc" data-astro-cid-ptuyl3tj><p>DataBook Studio provides comprehensive Snowflake support with three authentication methods and efficient large result set handling.</p>
+<h2 id="authentication">Authentication</h2>
+<p>Three methods are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>User/Password</strong></td>
+<td>Standard username and password login</td>
+</tr>
+<tr>
+<td><strong>Key-Pair</strong></td>
+<td>Authenticate with a private key for automated or service-account access</td>
+</tr>
+<tr>
+<td><strong>SSO (Browser)</strong></td>
+<td>External browser OAuth flow for SSO-enabled accounts</td>
+</tr>
+</tbody>
+</table>
+<p>Session tokens are cached for convenience with automatic refresh. Role, warehouse, database, and schema selection happens automatically with graceful fallback for permission-restricted contexts.</p>
+<h2 id="large-result-sets">Large Result Sets</h2>
+<p>When Snowflake returns large result sets, the API splits rows across multiple partition URLs instead of returning them inline. DataBook Studio handles this transparently — downloading, decompressing, and assembling the complete result set for you with no manual intervention.</p>
+<h2 id="snowflake-dialect">Snowflake Dialect</h2>
+<p>The AI copilot understands Snowflake-specific SQL syntax (QUALIFY, VARIANT, etc.) and generates dialect-correct queries. Safety guardrails also apply Snowflake-specific rules.</p>
+</div></article></div></main><footer class="footer" data-astro-cid-jo6i4kqk><div class="container-wide footer-inner" data-astro-cid-jo6i4kqk><div class="footer-brand" data-astro-cid-jo6i4kqk><a href="/" aria-label="DataBook Studio home" class="footer-wordmark" data-astro-cid-jo6i4kqk><img src="/logo.png" alt="DataBook Studio" class="footer-logo" width="844" height="449" data-astro-cid-jo6i4kqk></a><p class="footer-tagline" data-astro-cid-jo6i4kqk>Local-first SQL workspace with a built-in AI copilot.</p></div><nav class="footer-columns" aria-label="Footer" data-astro-cid-jo6i4kqk><div class="footer-col" data-astro-cid-jo6i4kqk><div class="footer-col-heading" data-astro-cid-jo6i4kqk>Product</div><ul class="footer-col-links" data-astro-cid-jo6i4kqk><li data-astro-cid-jo6i4kqk><a href="/features/" class="footer-link" data-astro-cid-jo6i4kqk>Features</a></li><li data-astro-cid-jo6i4kqk><a href="/saya-ai/" class="footer-link" data-astro-cid-jo6i4kqk>SAYA AI</a></li><li data-astro-cid-jo6i4kqk><a href="/databases/" class="footer-link" data-astro-cid-jo6i4kqk>Databases</a></li><li data-astro-cid-jo6i4kqk><a href="/pricing/" class="footer-link" data-astro-cid-jo6i4kqk>Pricing</a></li><li data-astro-cid-jo6i4kqk><a href="/download/" class="footer-link" data-astro-cid-jo6i4kqk>Download</a></li><li data-astro-cid-jo6i4kqk><a href="/changelog/" class="footer-link" data-astro-cid-jo6i4kqk>Changelog</a></li></ul></div><div class="footer-col" data-astro-cid-jo6i4kqk><div class="footer-col-heading" data-astro-cid-jo6i4kqk>Resources</div><ul class="footer-col-links" data-astro-cid-jo6i4kqk><li data-astro-cid-jo6i4kqk><a href="/docs/" class="footer-link" data-astro-cid-jo6i4kqk>Docs</a></li><li data-astro-cid-jo6i4kqk><a href="/faq/" class="footer-link" data-astro-cid-jo6i4kqk>FAQ</a></li><li data-astro-cid-jo6i4kqk><a href="/security/" class="footer-link" data-astro-cid-jo6i4kqk>Security</a></li><li data-astro-cid-jo6i4kqk><a href="mailto:databook.studio@gmail.com" class="footer-link" data-astro-cid-jo6i4kqk>Support</a></li></ul></div><div class="footer-col" data-astro-cid-jo6i4kqk><div class="footer-col-heading" data-astro-cid-jo6i4kqk>Legal</div><ul class="footer-col-links" data-astro-cid-jo6i4kqk><li data-astro-cid-jo6i4kqk><a href="/privacy/" class="footer-link" data-astro-cid-jo6i4kqk>Privacy Policy</a></li><li data-astro-cid-jo6i4kqk><a href="/terms/" class="footer-link" data-astro-cid-jo6i4kqk>Terms of Service</a></li></ul></div></nav><div class="footer-bottom" data-astro-cid-jo6i4kqk><span class="footer-copy" data-astro-cid-jo6i4kqk>© 2026 DataBook Studio</span></div></div></footer><div id="cookie-consent" class="cookie-consent" role="region" aria-label="Cookie consent" hidden data-astro-cid-kror3uvh><p class="cookie-consent-text" data-astro-cid-kror3uvh>This site uses Google Analytics to understand which pages help people. No ads, no cross-site tracking.<a href="/privacy/" class="link-inline" data-astro-cid-kror3uvh>Privacy Policy</a></p><div class="cookie-consent-actions" data-astro-cid-kror3uvh><button type="button" class="btn btn-secondary" id="cookie-consent-decline" data-astro-cid-kror3uvh>Decline</button><button type="button" class="btn btn-primary" id="cookie-consent-allow" data-astro-cid-kror3uvh>Allow analytics</button></div></div><script>
+  (function () {
+    var KEY = "db-consent-analytics";
+    var banner = document.getElementById("cookie-consent");
+    var allowBtn = document.getElementById("cookie-consent-allow");
+    var declineBtn = document.getElementById("cookie-consent-decline");
+    if (!banner || !allowBtn || !declineBtn) return;
+
+    function updateConsent(granted) {
+      if (typeof window.gtag === "function") {
+        window.gtag("consent", "update", {
+          analytics_storage: granted ? "granted" : "denied",
+        });
+      }
+    }
+
+    var stored = localStorage.getItem(KEY);
+    if (stored === "granted") {
+      updateConsent(true);
+    } else if (stored !== "denied") {
+      banner.hidden = false;
+    }
+
+    allowBtn.addEventListener("click", function () {
+      localStorage.setItem(KEY, "granted");
+      updateConsent(true);
+      banner.hidden = true;
+    });
+
+    declineBtn.addEventListener("click", function () {
+      localStorage.setItem(KEY, "denied");
+      banner.hidden = true;
+    });
+  })();
+</script></body></html><script>(function(){const base = "/";
+
+  // Load Pagefind search UI (only exists after build in /pagefind/)
+  // is:inline + define:vars passes the Astro base path into the runtime script.
+  var pfPath = base + "pagefind/pagefind-ui.js";
+  import(pfPath).then(function (module) {
+    new module.PagefindUI({ element: "#pagefind-search", showSubResults: true, baseUrl: base });
+  }).catch(function () {});
+})();</script>
