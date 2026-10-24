@@ -10,7 +10,7 @@
     [ DataBook<tspan fill="#007aff">_</tspan>Studio ]
   </text>
   <text x="600" y="360" class="body" font-size="32" text-anchor="middle" fill="#424245">
-    A desktop-native Data IDE and SQL Notebook with an AI copilot.
+    A macOS app. Bring your own API key or gateway.
   </text>
   <rect x="500" y="420" width="200" height="4" fill="#007aff" rx="2" />
 </svg>
