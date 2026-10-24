@@ -1455,7 +1455,7 @@ pagefind-modal-trigger {
     font-size: 13px;
 }
 
-/* Ensure focus indicators are visible in Windows High Contrast Mode */
+/* Ensure focus indicators are visible in forced-colors / high contrast mode */
 @media (forced-colors: active) {
     :is(*, #\#):is(*, #\#):is(*, #\#) .pf-input:focus-visible,
     :is(*, #\#):is(*, #\#):is(*, #\#) .pf-searchbox-input:focus-visible,
